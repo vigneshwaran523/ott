@@ -22,23 +22,24 @@ const Auth = () => {
                </h2>
                <div className="flex flex-col gap-4">
                <Input
-                  label="email"
-                  onchange={(ev:any) => setname(ev.target.value)}
-                  id="email"
-                  value={" "}
-               />
-               <Input
                   label="username"
                   onchange={(ev:any) => setname(ev.target.value)}
                   id="name"
                   value={" "}
                />
-               <Input
+                <Input
+                  label="email"
+                  onchange={(ev:any) => setemail(ev.target.value)}
+                  id="email"
+                  value={" "}
+               />
+                <Input
                   label="password"
-                  onchange={(ev:any) => setname(ev.target.value)}
+                  onchange={(ev:any) => setpassword(ev.target.value)}
                   id="password"
                   value={" "}
                />
+               
                </div>
             </div>
         </div>
