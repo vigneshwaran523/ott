@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react"; 
 import Input from "../Input"; // Ensure this path is correct
+import axios from "axios";
 
 const Auth = () => {
     const [email, setEmail] = useState(""); // Removed extra space
@@ -14,6 +15,18 @@ const Auth = () => {
     const togglevariant = useCallback(() => {
         setvariant((currentvariant) =>currentvariant === 'login'? 'register':'login')
     } , []);
+
+    const register = useCallback(async() => {
+       try{
+        await axios.post('/api/register',{
+            email,
+            name,
+            password
+        });
+       }catch(error){
+        console.log(error);
+       }
+    },[email,name,password])
 
     return (
         <div className="relative h-screen w-full bg-[url('/images/logo.jpeg')] bg-cover bg-center">
