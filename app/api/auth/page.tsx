@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from "react"; 
-import Input from "../Input"; // Ensure this path is correct
+import Input from "../../Input"; // Ensure this path is correct
 import axios from "axios";
 
 const Auth = () => {
